@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="nav">
+        <ul id="nav_list">
+          <li class="nav_item">
+            <a class="nav_link" href="home.html"><b>HOME</b></a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href=""><b>ABOUT US</b></a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href=""><b>PRODUCTS</b></a>
+          </li>
+          <li class="nav_item">
+            <a class="nav_link" href="contact.html"><b>CONTACT</b></a>
+          </li>
+        </ul>
+
+        <div id="search">
+          <label class="search_label"><b>search: </b></label>
+          <input class="search_box" type="text" placeholder="Search here..." />
+          <button id="search_btn">Go</button>
+        </div>
+      </div>
+
+      <div id="header">
+        <img src="../hinh/beach.jpg" class="header_image" />
+      </div>
+
+      <div id="content">
+        <div id="section">
+          <div class="title_wrapper">
+            <h1 class="text_title">Introduction - Contact</h1>
+          </div>
+          <div class="text_wrapper">
+            <div id="text">
+                Nha Trang Bay covers an area of about 507 km² including 19
+              islands, large and small, of which Hon Tre is the largest island,
+              with an area of 32.5 km²; The smallest island, Hon No, is only
+              about 4 hectares. The bay has two distinct seasons. The dry season
+              lasts from January to August, the rainy season lasts from
+              September to December; The average annual temperature is 26
+              degrees Celsius; hottest 39 degrees C, coldest 14.4 degrees C. In
+              terms of ecology, Nha Trang Bay is one of the rare natural
+              patterns of the system of pools and bays in the world because it
+              has most of the ecosystems.
+            </div>
+
+            <fieldset id="form">
+              <legend>Information</legend>
+              <form>
+                <div class="form_section">
+                  <label class="form_label">Name:</label><br />
+                  <input
+                    required
+                    type="text"
+                    placeholder="Your name"
+                    id="nameField"
+                    class="form_input"
+                  />
+                </div>
+
+                <div class="form_section">
+                  <label class="form_label">Email:</label><br />
+                  <input
+                    required
+                    type="email"
+                    placeholder="Your email"
+                    id="emailField"
+                    class="form_input"
+                  />
+                </div>
+
+                <div class="form_section">
+                  <label class="form_label" for="">Gender: </label>
+                  <br>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      checked
+                      id="maleCheck"
+                    />
+                    Male
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      id="femaleCheck"
+                    />
+                    Female
+                  </label>
+                </div>
+
+                <div class="form_section button_section">
+                  <button type="submit" class="form_btn" id="submit_btn">
+                    <b>Submit</b>
+                  </button>
+                  <button type="button" class="form_btn" id="reset_btn">
+                    <b>Reset</b>
+                  </button>
+                </div>
+              </form>
+            </fieldset>
+          </div>
+        </div>
+
+        <div id="aside">
+          <div class="tour-image">
+            <h2 class="tour_title">View</h2>
+            <img class="tour_image" src="../hinh/view.jpg" />
+          </div>
+
+          <div class="tour-image">
+            <h2 class="tour_title">Restaurant</h2>
+            <img class="tour_image" src="../hinh/restaurant.jpg" />
+          </div>
+
+          <div class="tour-image">
+            <h2 class="tour_title">Conference Room</h2>
+            <img class="tour_image" src="../hinh/conference.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="student">
+            22692311 - Trương Công Hải
+        </div>
+        <div class="class">
+            DHKTPM18CTT - Khoa CNTT
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const nameField = document.getElementById("nameField");
+      const emailField = document.getElementById("emailField");
+
+      const submitBtn = document.getElementById("submit_btn");
+      const resetBtn = document.getElementById("reset_btn");
+
+      submitBtn.addEventListener("click", () => {
+        if (!validateData(nameField.value, emailField.value)) {
+          alert("Dữ liệu không hợp lệ");
+        } else {
+          alert("Submit thành công");
+          nameField.value = "";
+          emailField.value = "";
+        }
+      });
+
+      resetBtn.addEventListener("click", () => {
+        nameField.value = "";
+        emailField.value = "";
+      });
+
+      const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      };
+
+      const validateData = (name, email) => {
+        if (
+          name.trim().length === 0 ||
+          email.trim().length === 0 ||
+          !isValidEmail(email)
+        ) {
+          return false;
+        }
+        return true;
+      };
+    </script>
+  </body>
+</html>

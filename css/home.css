@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: pink;
+  justify-content: space-between;
+}
+
+#nav_list {
+  display: flex;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.nav_item {
+  margin-right: 30px;
+}
+
+.nav_link {
+  color: blue;
+  text-decoration: none;
+}
+
+#search {
+  margin-right: 12px;
+}
+
+.search_label {
+  text-transform: uppercase;
+  color: red;
+}
+
+#search_btn {
+  background-color: blue;
+  color: ghostwhite;
+}
+
+.header_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section {
+  width: 70%;
+  padding-left: auto;
+  background: linear-gradient(
+    to right,
+    rgb(125, 237, 233) 0%,
+    transparent 50%,
+    rgb(125, 237, 233) 100%
+  );
+}
+
+.text_title {
+  text-align: center;
+  color: red;
+  margin-bottom: 12px;
+}
+
+.text_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#text {
+  font-size: 20px;
+  width: 45%;
+  text-align: justify;
+  margin: 0 0 8px 12px;
+}
+
+#form {
+  height: 391px;
+  width: 45%;
+  font-size: 20px;
+  border: 3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin-right: 12px;
+}
+
+.form_section {
+  margin-bottom: 24px;
+}
+
+.button_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form_label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.form_input {
+  border-radius: 4px;
+  border-top: 2px solid grey;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  padding: 8px 4px;
+  width: 90%;
+}
+
+.form_btn {
+  border-radius: 5px;
+  border: none;
+  margin: 10px 15px 10px 10px;
+  padding: 4px 0;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  width: 100px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#aside {
+  width: 30%;
+  border: 5px solid gray;
+}
+
+.tour_title {
+  padding-bottom: 10px;
+  color: red;
+  text-align: center;
+  text-shadow: 3px 3px 3px rgba(255, 0, 0, 0.5);
+  border-bottom: 3px dotted darkred;
+}
+
+.tour_image {
+  margin: 10px 10px 10px 10px;
+  width: 95%;
+  height: 30%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+}
+
+.tour_image:hover {
+    transform: rotate(15deg)
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #CBCC66;
+}
+
+.student {
+    margin-left: 12px;
+}
+
+.class {
+    margin-right: 12px;
+}
